@@ -1,11 +1,44 @@
 <!DOCTYPE html>
 <html>
   <head>
+  	<style>
+  		.coolStuff{color: blue;}
+  		.blahStuff{color: red;}
+  	</style>
+
     <title>My Awesomeness</title>
+
+    <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.4.min.js" ></script>
   </head>
 
-  <body>
-    <h1>My Heading</h1>
+  <body onload="console.log('body loaded...');">
+    <h1 class="blahStuff">Shopping List</h1>
     <p>Here's some stuff.</p>
+
+    <h1 class="blahStuff">Household Chores</h1>
+    <p>Here's some stuff.</p>
+
+    <h1 class="coolStuff">Upcoming Concerts</h1>
+    <p>Here's some stuff.</p>
+
+    <h1 class="coolStuff">Hackathons</h1>
+    <p>Here's some stuff.</p>
+
+    <script type="text/javascript">
+    $('document').ready(
+	    function() {
+	    	$('.blahStuff').mouseover(
+	    		function() {
+		    		console.log('This is blah stuff... :-/');
+	    		}
+	    	);
+		    $('.coolStuff').mouseover(
+		    	function() {
+		    		console.log('This is cool stuff! :-D');
+		    	}
+	    	);
+    	}
+	);
+    </script>
   </body>
 </html>
